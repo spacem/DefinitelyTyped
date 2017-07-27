@@ -7,7 +7,7 @@
 
 /// <reference types="node" />
 
-import { Writable, Stream } from 'stream';
+import { Readable, Writable, Stream } from 'stream';
 
 export const enum RelationshipType {
 	None = 0,
@@ -895,6 +895,11 @@ export interface Xlsx {
 	 * read from a file
 	 */
 	readFile(path: string): Promise<void>;
+	
+	/**
+	 * read from a stream
+	 */
+	read(stream: Readable): Promise<Workbook>;
 
 	/**
 	 * Create input stream for reading
