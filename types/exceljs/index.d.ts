@@ -895,7 +895,7 @@ export interface Xlsx {
 	 * read from a file
 	 */
 	readFile(path: string): Promise<void>;
-	
+
 	/**
 	 * read from a stream
 	 */
